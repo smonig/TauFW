@@ -16,7 +16,8 @@ lumi = -1   # integrated luminosity [fb-1]
 cme  = 13   # center-of-mass energy [TeV]
 xsecs_nlo = { # NLO cross sections to compute k-factor for stitching
   'DYJetsToLL_M-50':     3*2025.74, # NNLO, FEWZ
-  'DYJetsToLL_M-10to50':  18610.0, # NLO, aMC@NLO
+  #'DYJetsToLL_M-10to50':  18610.0, # NLO, aMC@NLO
+  'DYJetsToLL_M-10to50':  6077.22*3., # NNLO, aMC@NLO
   'WJetsToLNu':         3*20508.9, # NNLO, FEWZ
 }
 
@@ -432,7 +433,6 @@ def stitch(samplelist,*searchterms,**kwargs):
     kfactor       = xsec_incl_NLO / xsec_incl_LO
   LOG.verb("  %s k-factor = %.2f = %.2f / %.2f"%(name,kfactor,xsec_incl_NLO,xsec_incl_LO),verbosity,level=2)
   
-
   name  = kwargs.get('name',stitchlist[0].name)
   title = kwargs.get('title',gettitle(name,stitchlist[0].title))
   if not title:
