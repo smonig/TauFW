@@ -78,7 +78,8 @@ class ModuleMuMu(ModuleTauPair):
     
     
     ##### TRIGGER ####################################
-    if not self.trigger(event):
+    #if not self.trigger(event):
+    if not self.trigger.fired(event):
       return False
     self.out.cutflow.fill('trig')
     

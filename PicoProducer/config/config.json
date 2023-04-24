@@ -15,7 +15,7 @@
     "2017": "examples/samples_2017.py", 
     "2018": "examples/samples_2018.py",
     "UL2018": "samples_UL2018.py",
-    "UL2018_v10": "samples_UL2018_DeepTauv2p5.py"
+    "UL2018_v10": "samples_UL2018_nanoV10.py"
   }, 
   "nfilesperjob": 1, 
   "filelistdir": "samples/files/$ERA/$SAMPLE.txt", 
